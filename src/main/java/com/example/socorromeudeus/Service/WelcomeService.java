@@ -5,8 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Service
 public class WelcomeService {
+    public String quadro(){
+        return "Tá tudo derretendo!";
+    }
 
-    @GetMapping("/")
     public String Welcome(String name){
         return "Bem vindo, " + name + "!";
     }

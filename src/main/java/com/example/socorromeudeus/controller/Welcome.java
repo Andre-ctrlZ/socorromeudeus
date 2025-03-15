@@ -7,14 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/welcome")
+@RequestMapping("/")
 public class Welcome {
 
     @Autowired
     private  WelcomeService welcomeService;
 
-    @RequestMapping
+    @GetMapping
     public String welcome(){
         return welcomeService.Welcome("Lui");
+    }
+
+    @GetMapping("/quadro")
+    public String quadro(){
+        return welcomeService.quadro();
     }
 }
